@@ -14,6 +14,7 @@
   <script src="components/bow-and-arrow.js"></script>
   <script src="components/rotate-toward-velocity.js"></script>
   <script src="components/poissondisc-forest.js"></script>
+  <script src="components/microphone.js"></script>
 
   <script src="aframe-physics-system.js"></script>
 </head>
@@ -65,15 +66,14 @@
     <a-entity id="bowContainer" bow-and-arrow position="-0.5 1 -0.5"></a-entity>-->
     
     <!-- Hands -->
+    <a-entity id="microphoneContainer" microphone position="0 0 -1"></a-entity>
 
-    <!--<a-entity id="leftHand" hand-controls="left" aabb-collider="objects:#bow;" grab></a-entity>
-    <a-entity id ="rightHand" hand-controls="right" aabb-collider="objects:#bow;" grab></a-entity>-->
+    <a-entity id="leftHand" scale="0.5 0.5 0.5" hand-controls="left" aabb-collider="objects:#microphone;" grab></a-entity>
+    <a-entity id ="rightHand" scale="0.5 0.5 0.5" hand-controls="right" aabb-collider="objects:#microphone;" grab></a-entity>
 
      <!-- Targets-->
 
     
-    <a-entity class="microphone"  static-body position = "0 0 -4" obj-model="obj: #mic-obj; mtl: #mic-mtl"></a-entity>
-
     <a-entity id="forest" poissondisc-forest></a-entity>
 
   </a-scene>
